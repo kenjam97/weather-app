@@ -5,6 +5,7 @@ const geocode = require('../../weather-app/utils/geocode')
 const forecast = require('../../weather-app/utils/forecast')
 
 const app = express()
+const port = process.evn.PORT || 3000
 
 const publicDir = path.join(__dirname, '../public')
 const views = path.join(__dirname, '../templates/views')
@@ -58,6 +59,6 @@ app.get('*', (req, res) => {
   })
 })
 
-app.listen(3000, () => {
-  console.log('Server started on port 3000')
+app.listen(port, () => {
+  console.log(`Server started on port ${port}`)
 })
