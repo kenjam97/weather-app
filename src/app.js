@@ -5,7 +5,7 @@ const geocode = require('../../weather-app/utils/geocode')
 const forecast = require('../../weather-app/utils/forecast')
 
 const app = express()
-const port = process.evn.PORT || 3000
+const port = process.env.PORT || 3000
 
 const publicDir = path.join(__dirname, '../public')
 const views = path.join(__dirname, '../templates/views')
