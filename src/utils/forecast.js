@@ -16,7 +16,13 @@ const forecast = (lat, lon, callback) => {
     } else {
       callback(
         undefined,
-        `It is currently ${data.current.temperature} degrees out. It feels like ${data.current.feelslike} degrees out.`,
+        `It is currently ${
+          data.current.temperature
+        } degrees out. It feels like ${
+          data.current.feelslike
+        } degrees out. It is ${
+          data.current.is_day ? 'day time' : 'night time'
+        }.`,
       )
     }
   })
