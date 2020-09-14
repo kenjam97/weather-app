@@ -21,7 +21,7 @@ const forecast = (lat, lon, callback) => {
         } degrees out. It feels like ${
           data.current.feelslike
         } degrees out. It is ${
-          data.current.is_day === 'yes ? 'day time' : 'night time'
+          data.current.is_day === 'yes' ? 'day time' : 'night time'
         }.`,
       )
     }
